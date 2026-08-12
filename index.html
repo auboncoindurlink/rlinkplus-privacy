@@ -3,213 +3,236 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101010">
   <title>Politique de confidentialité – R-LINK+</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-      line-height: 1.7;
-      color: #222;
-      background: #fff;
-    }
 
-    h1, h2 {
-      color: #111;
-    }
+:root{
+  --bg:#090909;
+  --panel:#101010;
+  --panel-2:#151515;
+  --text:#ffffff;
+  --muted:rgba(255,255,255,.62);
+  --muted-2:rgba(255,255,255,.38);
+  --line:rgba(255,255,255,.10);
+  --accent:#f5b400;
+  --accent-soft:rgba(245,180,0,.12);
+  --accent-line:rgba(245,180,0,.34);
+  --shadow:0 22px 55px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:
+    radial-gradient(circle at 12% 0%, rgba(245,180,0,.07), transparent 28rem),
+    var(--bg);
+  color:var(--text);
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.68;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.site-header{
+  position:sticky;top:0;z-index:20;
+  background:rgba(16,16,16,.95);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{
+  max-width:1180px;margin:0 auto;
+  min-height:74px;padding:12px 22px;
+  display:flex;align-items:center;justify-content:space-between;gap:20px;
+}
+.brand{min-width:0}
+.brand-title{
+  color:var(--accent);
+  font-size:clamp(18px,3vw,25px);
+  line-height:1.05;font-weight:900;letter-spacing:.04em;
+}
+.brand-subtitle{
+  margin-top:5px;color:var(--muted-2);
+  font-size:12px;font-weight:700;
+}
+.back-link{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:10px 14px;border:1px solid var(--line);
+  border-radius:12px;background:rgba(255,255,255,.04);
+  color:#fff;font-weight:700;font-size:14px;white-space:nowrap;
+}
+.back-link:hover{
+  border-color:var(--accent-line);
+  background:var(--accent-soft);
+  text-decoration:none;
+}
+main{max-width:980px;margin:0 auto;padding:54px 22px 72px}
+.hero{
+  position:relative;overflow:hidden;
+  padding:32px;border:1px solid var(--line);
+  border-radius:24px;background:linear-gradient(145deg,#151515,#0f0f0f);
+  box-shadow:var(--shadow);
+}
+.hero:before{
+  content:"";position:absolute;inset:0 auto 0 0;width:5px;background:var(--accent);
+}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  margin-bottom:12px;color:var(--accent);
+  font-size:12px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;
+}
+h1{margin:0;font-size:clamp(30px,6vw,52px);line-height:1.06;letter-spacing:-.025em}
+.updated{margin:15px 0 0;color:var(--muted);font-size:14px}
+.intro{margin:22px 0 0;color:rgba(255,255,255,.78);font-size:17px}
+.notice{
+  margin:24px 0 0;padding:17px 18px;
+  border:1px solid var(--accent-line);
+  border-radius:15px;background:var(--accent-soft);
+  color:rgba(255,255,255,.86);
+}
+.content{display:grid;gap:14px;margin-top:22px}
+.section{
+  padding:25px 26px;border:1px solid var(--line);
+  border-radius:18px;background:var(--panel);
+}
+.section h2{
+  margin:0 0 11px;color:var(--accent);
+  font-size:20px;line-height:1.28;
+}
+.section p{margin:0;color:rgba(255,255,255,.76)}
+.section p+p{margin-top:11px}
+.section ul{margin:10px 0 0;padding-left:22px;color:rgba(255,255,255,.76)}
+.section li+li{margin-top:7px}
+.external-link,
+.mail{
+  display:inline-flex;margin-top:13px;padding:11px 14px;
+  background:var(--accent);color:#111!important;border-radius:11px;
+  font-weight:900;
+}
+.external-link:hover,.mail:hover{text-decoration:none;filter:brightness(1.04)}
+footer{
+  max-width:980px;margin:0 auto 30px;padding:0 22px;
+  text-align:center;color:var(--muted-2);font-size:13px;
+}
+.footer-line{border-top:1px solid var(--line);padding-top:25px}
+@media(max-width:640px){
+  .header-inner{padding:11px 16px;min-height:68px}
+  .brand-subtitle{display:none}
+  .back-link{padding:9px 11px;font-size:12px}
+  main{padding:30px 15px 52px}
+  .hero{padding:25px 20px;border-radius:19px}
+  .section{padding:21px 19px;border-radius:15px}
+  .intro{font-size:16px}
+}
 
-    h1 {
-      border-bottom: 3px solid #f5b400;
-      padding-bottom: 12px;
-    }
-
-    a {
-      color: #0066cc;
-    }
-
-    .box {
-      background: #f6f6f6;
-      border-left: 4px solid #f5b400;
-      padding: 16px;
-      margin: 20px 0;
-    }
-
-    footer {
-      margin-top: 50px;
-      padding-top: 20px;
-      border-top: 1px solid #ddd;
-      color: #666;
-      font-size: 0.95em;
-    }
   </style>
 </head>
-
 <body>
 
-<h1>Politique de confidentialité – R-LINK+</h1>
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">
+      <div class="brand-title">AU BON COIN DU R-LINK</div>
+      <div class="brand-subtitle">R-LINK 1 • R-LINK 2 • Communauté & entraide</div>
+    </div>
+    <a class="back-link" href="https://www.auboncoindu-rlink.fr/">← Retour au site</a>
+  </div>
+</header>
 
-<p>
-Dernière mise à jour : 7 août 2026
-</p>
+<main>
+  <section class="hero">
+    <div class="eyebrow">R-LINK+ • Confidentialité</div>
+    <h1>Politique de confidentialité</h1>
+    <p class="updated">Dernière mise à jour : 7 août 2026</p>
+    <p class="intro">
+      La présente politique de confidentialité décrit la manière dont l'application
+      <strong>R-LINK+</strong>, proposée dans le cadre du projet
+      <strong>Au Bon Coin du R-LINK</strong>, traite les informations lors de son utilisation.
+    </p>
+    <div class="notice">
+      <strong>R-LINK+ est une application communautaire indépendante</strong> destinée à faciliter
+      l'accès à des informations, tutoriels, outils et contenus relatifs aux systèmes
+      multimédias Renault R-LINK.
+    </div>
+  </section>
 
-<p>
-La présente politique de confidentialité décrit la manière dont l'application
-<strong>R-LINK+</strong>, proposée dans le cadre du projet
-<strong>Au Bon Coin du R-LINK</strong>, traite les informations lors de son utilisation.
-</p>
+  <div class="content">
+    <section class="section">
+      <h2>1. Données personnelles</h2>
+      <p>R-LINK+ n'exige pas la création d'un compte utilisateur pour consulter les principaux contenus de l'application.</p>
+      <p>L'application n'a pas pour objectif de collecter ou vendre des données personnelles à des fins publicitaires ou commerciales.</p>
+    </section>
 
-<div class="box">
-R-LINK+ est une application communautaire indépendante destinée à faciliter
-l'accès à des informations, tutoriels, outils et contenus relatifs aux systèmes
-multimédias Renault R-LINK.
-</div>
+    <section class="section">
+      <h2>2. Données techniques</h2>
+      <p>Certains services techniques nécessaires au fonctionnement de l'application peuvent traiter automatiquement des informations techniques, par exemple :</p>
+      <ul>
+        <li>le type d'appareil ;</li>
+        <li>la version du système d'exploitation ;</li>
+        <li>des identifiants techniques nécessaires aux notifications ;</li>
+        <li>des informations de diagnostic ou de fonctionnement de l'application.</li>
+      </ul>
+      <p>Ces informations peuvent notamment être utilisées afin d'assurer le bon fonctionnement de l'application, améliorer sa stabilité et permettre l'envoi de notifications.</p>
+    </section>
 
-<h2>1. Données personnelles</h2>
+    <section class="section">
+      <h2>3. Firebase</h2>
+      <p>R-LINK+ utilise certains services Google Firebase, notamment pour fournir et mettre à jour du contenu distant ainsi que certaines fonctionnalités de l'application.</p>
+      <p>Selon les fonctionnalités utilisées, Firebase peut traiter certaines données techniques nécessaires à la fourniture de ses services.</p>
+      <p>Pour plus d'informations concernant les pratiques de Google en matière de protection des données :</p>
+      <a class="external-link" href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Politique de confidentialité de Google</a>
+    </section>
 
-<p>
-R-LINK+ n'exige pas la création d'un compte utilisateur pour consulter les
-principaux contenus de l'application.
-</p>
+    <section class="section">
+      <h2>4. Notifications</h2>
+      <p>R-LINK+ peut proposer des notifications afin d'informer les utilisateurs de nouveaux contenus, tutoriels, informations ou mises à jour.</p>
+      <p>Les utilisateurs peuvent autoriser ou désactiver les notifications depuis les réglages de l'application ou les paramètres de leur appareil.</p>
+    </section>
 
-<p>
-L'application n'a pas pour objectif de collecter ou vendre des données
-personnelles à des fins publicitaires ou commerciales.
-</p>
+    <section class="section">
+      <h2>5. Favoris et préférences</h2>
+      <p>Certaines préférences, telles que les favoris ou les paramètres d'affichage, peuvent être enregistrées localement sur l'appareil afin d'améliorer l'expérience utilisateur.</p>
+      <p>Ces informations ne sont pas utilisées à des fins publicitaires.</p>
+    </section>
 
-<h2>2. Données techniques</h2>
+    <section class="section">
+      <h2>6. Liens externes</h2>
+      <p>L'application peut contenir des liens vers des sites ou services externes, notamment des documents, cartes, réseaux sociaux ou ressources communautaires.</p>
+      <p>R-LINK+ n'est pas responsable des politiques de confidentialité ou du contenu des services externes accessibles depuis l'application.</p>
+    </section>
 
-<p>
-Certains services techniques nécessaires au fonctionnement de l'application
-peuvent traiter automatiquement des informations techniques, par exemple :
-</p>
+    <section class="section">
+      <h2>7. Publicité et vente de données</h2>
+      <p>R-LINK+ ne vend pas les données personnelles des utilisateurs.</p>
+      <p>L'application n'utilise pas les informations des utilisateurs afin de réaliser du profilage publicitaire personnalisé.</p>
+    </section>
 
-<ul>
-  <li>le type d'appareil ;</li>
-  <li>la version du système d'exploitation ;</li>
-  <li>des identifiants techniques nécessaires aux notifications ;</li>
-  <li>des informations de diagnostic ou de fonctionnement de l'application.</li>
-</ul>
+    <section class="section">
+      <h2>8. Sécurité</h2>
+      <p>Des mesures raisonnables sont mises en œuvre afin de protéger les informations et les services utilisés par l'application contre les accès non autorisés, les pertes ou les utilisations abusives.</p>
+    </section>
 
-<p>
-Ces informations peuvent notamment être utilisées afin d'assurer le bon
-fonctionnement de l'application, améliorer sa stabilité et permettre
-l'envoi de notifications.
-</p>
+    <section class="section">
+      <h2>9. Enfants</h2>
+      <p>R-LINK+ n'est pas spécifiquement destinée aux enfants et ne cherche pas intentionnellement à collecter des données personnelles concernant des enfants.</p>
+    </section>
 
-<h2>3. Firebase</h2>
+    <section class="section">
+      <h2>10. Modification de cette politique</h2>
+      <p>Cette politique de confidentialité pourra être modifiée afin de tenir compte des évolutions de l'application, de ses fonctionnalités ou des obligations réglementaires.</p>
+      <p>La date de dernière mise à jour indiquée en haut de cette page permettra d'identifier la version applicable.</p>
+    </section>
 
-<p>
-R-LINK+ utilise certains services Google Firebase, notamment pour fournir et
-mettre à jour du contenu distant ainsi que certaines fonctionnalités de
-l'application.
-</p>
-
-<p>
-Selon les fonctionnalités utilisées, Firebase peut traiter certaines données
-techniques nécessaires à la fourniture de ses services.
-</p>
-
-<p>
-Pour plus d'informations concernant les pratiques de Google en matière de
-protection des données :
-</p>
-
-<p>
-<a href="https://policies.google.com/privacy" target="_blank">
-Politique de confidentialité de Google
-</a>
-</p>
-
-<h2>4. Notifications</h2>
-
-<p>
-R-LINK+ peut proposer des notifications afin d'informer les utilisateurs de
-nouveaux contenus, tutoriels, informations ou mises à jour.
-</p>
-
-<p>
-Les utilisateurs peuvent autoriser ou désactiver les notifications depuis les
-réglages de l'application ou les paramètres de leur appareil.
-</p>
-
-<h2>5. Favoris et préférences</h2>
-
-<p>
-Certaines préférences, telles que les favoris ou les paramètres d'affichage,
-peuvent être enregistrées localement sur l'appareil afin d'améliorer
-l'expérience utilisateur.
-</p>
-
-<p>
-Ces informations ne sont pas utilisées à des fins publicitaires.
-</p>
-
-<h2>6. Liens externes</h2>
-
-<p>
-L'application peut contenir des liens vers des sites ou services externes,
-notamment des documents, cartes, réseaux sociaux ou ressources communautaires.
-</p>
-
-<p>
-R-LINK+ n'est pas responsable des politiques de confidentialité ou du contenu
-des services externes accessibles depuis l'application.
-</p>
-
-<h2>7. Publicité et vente de données</h2>
-
-<p>
-R-LINK+ ne vend pas les données personnelles des utilisateurs.
-</p>
-
-<p>
-L'application n'utilise pas les informations des utilisateurs afin de réaliser
-du profilage publicitaire personnalisé.
-</p>
-
-<h2>8. Sécurité</h2>
-
-<p>
-Des mesures raisonnables sont mises en œuvre afin de protéger les informations
-et les services utilisés par l'application contre les accès non autorisés,
-les pertes ou les utilisations abusives.
-</p>
-
-<h2>9. Enfants</h2>
-
-<p>
-R-LINK+ n'est pas spécifiquement destinée aux enfants et ne cherche pas
-intentionnellement à collecter des données personnelles concernant des enfants.
-</p>
-
-<h2>10. Modification de cette politique</h2>
-
-<p>
-Cette politique de confidentialité pourra être modifiée afin de tenir compte
-des évolutions de l'application, de ses fonctionnalités ou des obligations
-réglementaires.
-</p>
-
-<p>
-La date de dernière mise à jour indiquée en haut de cette page permettra
-d'identifier la version applicable.
-</p>
-
-<h2>11. Contact</h2>
-
-<p>
-Pour toute question concernant cette politique de confidentialité ou
-l'application R-LINK+, vous pouvez nous contacter à l'adresse suivante :
-</p>
-
-<p>
-<strong>auboncoindurlink2@gmail.com</strong>
-</p>
+    <section class="section">
+      <h2>11. Contact</h2>
+      <p>Pour toute question concernant cette politique de confidentialité ou l'application R-LINK+, vous pouvez nous contacter à l'adresse suivante :</p>
+      <a class="mail" href="mailto:auboncoindurlink2@gmail.com">auboncoindurlink2@gmail.com</a>
+    </section>
+  </div>
+</main>
 
 <footer>
-R-LINK+ – Au Bon Coin du R-LINK<br>
-Application communautaire indépendante.
+  <div class="footer-line">R-LINK+ • Au Bon Coin du R-LINK<br>Application communautaire indépendante.</div>
 </footer>
 
 </body>
