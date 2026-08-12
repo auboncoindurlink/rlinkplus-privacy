@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101010">
+  <title>Suppression des données – R-LINK+</title>
+  <style>
+
+:root{
+  --bg:#090909;
+  --panel:#101010;
+  --panel-2:#151515;
+  --text:#ffffff;
+  --muted:rgba(255,255,255,.62);
+  --muted-2:rgba(255,255,255,.38);
+  --line:rgba(255,255,255,.10);
+  --accent:#f5b400;
+  --accent-soft:rgba(245,180,0,.12);
+  --accent-line:rgba(245,180,0,.34);
+  --shadow:0 22px 55px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:
+    radial-gradient(circle at 12% 0%, rgba(245,180,0,.07), transparent 28rem),
+    var(--bg);
+  color:var(--text);
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.68;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.site-header{
+  position:sticky;top:0;z-index:20;
+  background:rgba(16,16,16,.95);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{
+  max-width:1180px;margin:0 auto;
+  min-height:74px;padding:12px 22px;
+  display:flex;align-items:center;justify-content:space-between;gap:20px;
+}
+.brand{min-width:0}
+.brand-title{
+  color:var(--accent);
+  font-size:clamp(18px,3vw,25px);
+  line-height:1.05;font-weight:900;letter-spacing:.04em;
+}
+.brand-subtitle{
+  margin-top:5px;color:var(--muted-2);
+  font-size:12px;font-weight:700;
+}
+.back-link{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:10px 14px;border:1px solid var(--line);
+  border-radius:12px;background:rgba(255,255,255,.04);
+  color:#fff;font-weight:700;font-size:14px;white-space:nowrap;
+}
+.back-link:hover{
+  border-color:var(--accent-line);
+  background:var(--accent-soft);
+  text-decoration:none;
+}
+main{max-width:980px;margin:0 auto;padding:54px 22px 72px}
+.hero{
+  position:relative;overflow:hidden;
+  padding:32px;border:1px solid var(--line);
+  border-radius:24px;background:linear-gradient(145deg,#151515,#0f0f0f);
+  box-shadow:var(--shadow);
+}
+.hero:before{
+  content:"";position:absolute;inset:0 auto 0 0;width:5px;background:var(--accent);
+}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  margin-bottom:12px;color:var(--accent);
+  font-size:12px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;
+}
+h1{margin:0;font-size:clamp(30px,6vw,52px);line-height:1.06;letter-spacing:-.025em}
+.updated{margin:15px 0 0;color:var(--muted);font-size:14px}
+.intro{margin:22px 0 0;color:rgba(255,255,255,.78);font-size:17px}
+.notice{
+  margin:24px 0 0;padding:17px 18px;
+  border:1px solid var(--accent-line);
+  border-radius:15px;background:var(--accent-soft);
+  color:rgba(255,255,255,.86);
+}
+.content{display:grid;gap:14px;margin-top:22px}
+.section{
+  padding:25px 26px;border:1px solid var(--line);
+  border-radius:18px;background:var(--panel);
+}
+.section h2{
+  margin:0 0 11px;color:var(--accent);
+  font-size:20px;line-height:1.28;
+}
+.section p{margin:0;color:rgba(255,255,255,.76)}
+.section p+p{margin-top:11px}
+.section ul{margin:10px 0 0;padding-left:22px;color:rgba(255,255,255,.76)}
+.section li+li{margin-top:7px}
+.mail{
+  display:inline-flex;margin-top:13px;padding:11px 14px;
+  background:var(--accent);color:#111!important;border-radius:11px;
+  font-weight:900;
+}
+.mail:hover{text-decoration:none;filter:brightness(1.04)}
+footer{
+  max-width:980px;margin:0 auto 30px;padding:0 22px;
+  text-align:center;color:var(--muted-2);font-size:13px;
+}
+.footer-line{border-top:1px solid var(--line);padding-top:25px}
+@media(max-width:640px){
+  .header-inner{padding:11px 16px;min-height:68px}
+  .brand-subtitle{display:none}
+  .back-link{padding:9px 11px;font-size:12px}
+  main{padding:30px 15px 52px}
+  .hero{padding:25px 20px;border-radius:19px}
+  .section{padding:21px 19px;border-radius:15px}
+  .intro{font-size:16px}
+}
+
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">
+      <div class="brand-title">AU BON COIN DU R-LINK</div>
+      <div class="brand-subtitle">R-LINK 1 • R-LINK 2 • Communauté & entraide</div>
+    </div>
+    <a class="back-link" href="https://www.auboncoindu-rlink.fr/">← Retour au site</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="eyebrow">R-LINK+ • Confidentialité</div>
+    <h1>Suppression des données</h1>
+    <p class="intro">Cette page explique comment demander la suppression de données éventuellement associées à votre utilisation de <strong>R-LINK+</strong> et des services Au Bon Coin du R-LINK.</p>
+    <div class="notice">Pour toute demande de suppression, utilisez l’adresse de contact ci-dessous. Ne transmettez jamais de mot de passe ni d’information sensible inutile à l’identification de votre demande.</div>
+  </section>
+
+  <div class="content">
+    <section class="section">
+      <h2>1. Demander la suppression de vos données</h2>
+      <p>Vous pouvez nous adresser une demande de suppression des données personnelles que vous avez volontairement transmises dans le cadre des services R-LINK+.</p>
+      <a class="mail" href="mailto:auboncoindurlink2@gmail.com?subject=Demande%20de%20suppression%20de%20données%20R-LINK%2B">Envoyer une demande</a>
+    </section>
+
+    <section class="section">
+      <h2>2. Informations à indiquer</h2>
+      <p>Dans votre message, précisez simplement les éléments nécessaires pour retrouver les données concernées, par exemple l’adresse e-mail utilisée ou la nature du formulaire envoyé.</p>
+    </section>
+
+    <section class="section">
+      <h2>3. Données enregistrées sur votre appareil</h2>
+      <p>Les préférences ou données enregistrées localement par l’application peuvent être supprimées depuis les réglages de l’application ou en supprimant les données de l’application depuis les réglages de votre appareil.</p>
+    </section>
+
+    <section class="section">
+      <h2>4. Contact</h2>
+      <p>Pour toute question concernant la suppression ou le traitement de vos données :</p>
+      <a class="mail" href="mailto:auboncoindurlink2@gmail.com">auboncoindurlink2@gmail.com</a>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-line">R-LINK+ • Au Bon Coin du R-LINK<br>Application communautaire indépendante.</div>
+</footer>
+
+</body>
+</html>
